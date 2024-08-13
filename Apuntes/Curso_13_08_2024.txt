@@ -1,0 +1,31 @@
+Paginas Web:
+
+
+-Lenguage comun :html(version 5 actual)
+	Estructura General:escribit en cursor html elegir html :5
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+	markups:abre y cierra:
+		<head>,codigo,</head>
+		<title>,</title>
+		<h1> titulo </h1>
+		<form id="ageForm"> </form>
+
+-Lenguages particulares/especificos:
+	-Javascript:
+	<script> </script>
+	
+	-Php:(orientado servidor)
+	 <?php ,..,?>
+		
