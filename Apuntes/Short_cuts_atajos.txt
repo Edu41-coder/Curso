@@ -3,3 +3,4 @@ Seleccionar texto:ctrl + A
 Copiar texto:ctrl + C
 Pegar texto:ctrl + V
 Saltar linea en ChatGpt :shitf + Intro
+Grabar en cursor:ctrl+ S
