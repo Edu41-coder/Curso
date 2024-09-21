@@ -1,0 +1,52 @@
+Conexión a la base de datos:
+$dbh = new PDO('mysql:host=127.0.0.1;dbname=geographie;port=3306;charset=utf8mb4', 'root', '');
+
+Consulta y obtención de datos:
+$stmt = $dbh->query('SELECT * FROM pays');
+$les_pays = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$nb_pays = count($les_pays);
+
+Se realiza una consulta para obtener todos los países, se almacenan en $les_pays y se cuenta el número total.
+Cierre de la conexión:
+Se realiza una consulta para obtener todos los países, se almacenan en $les_pays y se cuenta el número total.
+Cierre de la conexión:
+
+Estructura HTML:
+Se crea una página HTML con Bootstrap para el estilo.
+Se muestra un título "Accueil Base Géographie".
+Hay un botón para añadir un nuevo país.
+ <a href="./ajouter-pays.php" class="btn btn-info">Ajouter un pays</a>
+ Elemento HTML:
+<a>: Es una etiqueta de anclaje (enlace) en HTML.
+Atributos:
+href="./ajouter-pays.php":
+Especifica la URL de destino del enlace.
+"./" indica que el archivo está en el mismo directorio que la página actual.
+"ajouter-pays.php" es el nombre del archivo PHP al que se enlaza.
+Clases CSS:
+class="btn btn-info":
+"btn" es una clase de Bootstrap que da formato de botón al enlace.
+"btn-info" es otra clase de Bootstrap que da un estilo específico al botón (generalmente azul claro).
+Texto del enlace:
+Ajouter un pays: Es el texto visible del botón, que en francés significa "Añadir un país".
+5. Funcionalidad:
+Al hacer clic en este botón, el usuario será dirigido a la página "ajouter-pays.php", que probablemente 
+contiene un formulario para añadir un nuevo país a la base de datos.
+Tabla de países:
+
+<table class="table">
+    <!-- ... -->
+    <?php foreach ($les_pays as $un_pays) { ?>
+        <tr>
+            <td><?= $un_pays["code"] ?></td>
+            <td><?= $un_pays["nom"] ?></td>
+            <td><?= $un_pays["capitale"] ?></td>
+            <td><?= $un_pays["population"] ?></td>
+            <td><?= $un_pays["superficie"] ?></td>
+        </tr>
+    <?php } ?>
+    <!-- ... -->
+</table>
+
+Se crea una tabla que muestra todos los países con sus detalles (código, nombre, capital, población y superficie).
+En resumen, este script PHP se conecta a una base de datos, obtiene información sobre países y la muestra en una tabla HTML con estilo Bootstrap.

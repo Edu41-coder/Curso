@@ -1,0 +1,28 @@
+Este código es una página HTML que crea un formulario para añadir un nuevo país. Te lo explico en detalle:
+1. Estructura HTML básica:
+Documento HTML5 con idioma francés (lang="fr").
+Sección <head> con metadatos, título y enlaces a hojas de estilo.
+Estilos:
+Utiliza Bootstrap 5.1 para el diseño.
+Incluye una hoja de estilos personalizada geo.css.
+Cuerpo del documento:
+Un encabezado con el título "Ajouter un pays" (Añadir un país).
+Un formulario dentro de un contenedor fluido.
+Formulario:
+Método POST, que enviará los datos a ajouter-pays-resultat.php.
+Campos del formulario:
+a. Code (Código): texto, requerido, longitud 3 caracteres.
+b. Nom (Nombre): texto, requerido.
+c. Capitale (Capital): texto, requerido.
+d. Population (Población): número, requerido.
+e. Superficie: número, requerido.
+Estructura del formulario:
+Usa el sistema de rejilla de Bootstrap (clases row y col-sm-*).
+Cada campo tiene una etiqueta (label) y un input.
+Los inputs usan la clase form-control de Bootstrap para el estilo.
+Botones:
+"Annuler" (Cancelar): enlace que vuelve a index.php.
+"Ajouter" (Añadir): botón de tipo submit para enviar el formulario.
+JavaScript:
+Incluye el bundle de Bootstrap con Popper para funcionalidades de Bootstrap.
+En resumen, este código crea una interfaz de usuario para que los usuarios puedan introducir datos de un nuevo país, que luego se enviarán a otro script PHP para su procesamiento y adición a la base de datos.
