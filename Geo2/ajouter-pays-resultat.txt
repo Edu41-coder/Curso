@@ -1,0 +1,57 @@
+1. Parte PHP:
+<?php
+$sql = "INSERT INTO pays (code, nom, capitale, population, superficie)
+VALUES (UPPER(TRIM('{$_POST['code']}')), '{$_POST['nom']}', '{$_POST['capitale']}', {$_POST['popu']}, {$_POST['super']});";
+
+$dbh = new PDO('mysql:host=127.0.0.1;dbname=geographie;port=3306;charset=utf8mb4', 'root', '');
+$stmt = $dbh->query($sql);
+$dbh = null;
+
+$message = "Réussite de l'ajout de : {$_POST['nom']}";
+?>
+Crea una consulta SQL para insertar los datos del nuevo país.
+Se conecta a la base de datos usando PDO.
+Ejecuta la consulta SQL.
+Cierra la conexión a la base de datos.
+Crea un mensaje de éxito.
+
+Estructura HTML:
+Documento HTML básico con metadatos y enlaces a hojas de estilo Bootstrap y personalizadas.
+3. Cuerpo del documento:
+Título "Résultat de l'ajout du pays" (Resultado de la adición del país).
+Muestra el mensaje de éxito en un alert de Bootstrap.
+Proporciona un enlace para volver a la página de inicio.
+4. JavaScript:
+Incluye el bundle de Bootstrap con Popper.
+Puntos importantes:
+El código asume que la inserción fue exitosa y no maneja errores.
+Los datos se insertan directamente en la consulta SQL, lo que puede ser vulnerable a inyecciones SQL.
+El mensaje de éxito se muestra independientemente del resultado real de la inserción.
+Para mejorar:
+Implementar manejo de errores.
+Usar consultas preparadas para prevenir inyecciones SQL.
+Verificar el resultado de la inserción antes de mostrar el mensaje de éxito.
+Este script completa el proceso de añadir un nuevo país a la base de datos, iniciado en la página del formulario anterior.
+
+
+
+
+
+
+
+El "Bootstrap Bundle with Popper" es un archivo JavaScript que combina dos componentes importantes:
+Bootstrap JS:
+Es la biblioteca JavaScript de Bootstrap.
+Proporciona funcionalidades interactivas para los componentes de Bootstrap como dropdowns, modales, tooltips, popovers, etc.
+Popper:
+Es una biblioteca de posicionamiento utilizada por Bootstrap.
+Se encarga de calcular posiciones para elementos flotantes como tooltips, popovers y dropdowns.
+Asegura que estos elementos se muestren correctamente en relación con otros elementos de la página.
+Beneficios del bundle:
+1. Conveniencia: Un solo archivo para ambas bibliotecas.
+Optimización: Generalmente está minificado para una carga más rápida.
+Compatibilidad: Asegura que las versiones de Bootstrap y Popper sean compatibles.
+Uso típico:
+<script src="./js/bootstrap.bundle.min.js"></script>
+Este bundle es esencial para el funcionamiento completo de los componentes interactivos de Bootstrap, proporcionando una experiencia de usuario
+ más rica y dinámica en sitios web que utilizan Bootstrap.
