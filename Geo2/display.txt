@@ -1,1 +1,0 @@
-http://localhost/htdocs/GEO/index.php
