@@ -1,0 +1,15 @@
+-- Créer la base de données
+CREATE DATABASE IF NOT EXISTS geographie CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Utiliser la base de données
+USE geographie;
+
+-- Créer la table pays
+CREATE TABLE IF NOT EXISTS pays (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(3) NOT NULL UNIQUE,
+    nom VARCHAR(255) NOT NULL,
+    capitale VARCHAR(255) NOT NULL,
+    population INT UNSIGNED NOT NULL,
+    superficie FLOAT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
